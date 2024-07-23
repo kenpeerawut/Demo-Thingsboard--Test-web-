@@ -1,98 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.11 on win32)" generated="2024-07-23T17:41:44.536969" rpa="false" schemaversion="5">
-<suite id="s1" name="Testbykeyword" source="C:\Users\user\Documents\GitHub\Demo-Thingsboard--Test-web-\Demo\Testbykeyword.robot">
-<test id="s1-t1" name="TC-001 Login With Email and Password(Correct Email,Correct Password)" line="8">
+<robot generator="Robot 7.0 (Python 3.10.11 on win32)" generated="2024-07-23T22:31:46.773025" rpa="false" schemaversion="5">
+<suite id="s1" name="TestDataDriven" source="C:\Users\user\Documents\GitHub\Demo-Thingsboard--Test-web-\Demo\TestDataDriven.robot">
+<test id="s1-t1" name="Correct Email and Invalid Password" line="10">
 <kw name="Open Google" owner="resource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-23T17:41:45.156945" level="INFO">Opening browser 'Chrome' to base url 'https://demo.thingsboard.io/login'.</msg>
-<msg time="2024-07-23T17:41:45.936946" level="WARN">The chromedriver version (125.0.6422.78) detected in PATH at C:\Chromedriver\chromedriver.exe might not be compatible with the detected chrome version (126.0.6478.184); currently, chromedriver 126.0.6478.182 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-07-23T22:31:46.977541" level="INFO">Opening browser 'Chrome' to base url 'https://demo.thingsboard.io/login'.</msg>
+<msg time="2024-07-23T22:31:47.388943" level="WARN">The chromedriver version (125.0.6422.78) detected in PATH at C:\Chromedriver\chromedriver.exe might not be compatible with the detected chrome version (126.0.6478.184); currently, chromedriver 126.0.6478.182 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${Web Thingsboard}</arg>
 <arg>${Chrome}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-23T17:41:45.156945" elapsed="6.930467"/>
+<status status="PASS" start="2024-07-23T22:31:46.977541" elapsed="12.145302"/>
 </kw>
-<status status="PASS" start="2024-07-23T17:41:45.155866" elapsed="6.931546"/>
+<status status="PASS" start="2024-07-23T22:31:46.977541" elapsed="12.145302"/>
 </kw>
-<kw name="FILL with Email and Password" owner="resource">
+<kw name="Login with Email and Password invalid credentials" owner="resource">
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-07-23T17:41:52.090619" elapsed="0.044541"/>
+<status status="PASS" start="2024-07-23T22:31:59.124921" elapsed="0.033459"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//img[@aria-label='logo']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-07-23T17:41:52.135160" elapsed="0.824817"/>
+<status status="PASS" start="2024-07-23T22:31:59.158380" elapsed="0.668983"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>xpath=//input[@id='username-input']</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-07-23T17:41:52.959977" elapsed="0.051205"/>
+<status status="PASS" start="2024-07-23T22:31:59.827363" elapsed="0.026966"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-23T17:41:53.011182" level="INFO">Typing text 'panntut@hotmail.com' into text field 'xpath=//input[@id='username-input']'.</msg>
+<msg time="2024-07-23T22:31:59.854329" level="INFO">Typing text 'Panntut@hotmail.com' into text field 'xpath=//input[@id='username-input']'.</msg>
 <arg>xpath=//input[@id='username-input']</arg>
 <arg>${Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T17:41:53.011182" elapsed="0.358969"/>
+<status status="PASS" start="2024-07-23T22:31:59.854329" elapsed="0.180116"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>xpath=//input[@id='password-input']</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-07-23T17:41:53.371327" elapsed="0.049688"/>
+<status status="PASS" start="2024-07-23T22:32:00.034445" elapsed="0.032877"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-23T17:41:53.421015" level="INFO">Typing text 'AdminAdmin' into text field 'xpath=//input[@id='password-input']'.</msg>
+<msg time="2024-07-23T22:32:00.067322" level="INFO">Typing text 'AdminAdmin0001' into text field 'xpath=//input[@id='password-input']'.</msg>
 <arg>xpath=//input[@id='password-input']</arg>
 <arg>${Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T17:41:53.421015" elapsed="0.267517"/>
+<status status="PASS" start="2024-07-23T22:32:00.067322" elapsed="0.136885"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-23T17:41:53.688532" level="INFO">Clicking element 'xpath=//span[normalize-space()='Login']'.</msg>
+<msg time="2024-07-23T22:32:00.204207" level="INFO">Clicking element 'xpath=//span[normalize-space()='Login']'.</msg>
 <arg>xpath=//span[normalize-space()='Login']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T17:41:53.688532" elapsed="0.108628"/>
-</kw>
-<arg>panntut@hotmail.com</arg>
-<arg>AdminAdmin</arg>
-<status status="PASS" start="2024-07-23T17:41:52.089599" elapsed="1.707561"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>xpath=//button[@aria-haspopup='menu']//span[1]</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-07-23T17:41:53.798186" elapsed="5.219222"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//span[@class='tb-user-display-name ng-star-inserted']</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-07-23T17:41:59.017408" elapsed="0.048110"/>
+<status status="PASS" start="2024-07-23T22:32:00.204207" elapsed="0.067211"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-23T17:42:04.079765" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-07-23T22:32:05.285286" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-23T17:41:59.066563" elapsed="5.013202"/>
+<status status="PASS" start="2024-07-23T22:32:00.271750" elapsed="5.013536"/>
+</kw>
+<arg>Panntut@hotmail.com</arg>
+<arg>AdminAdmin0001</arg>
+<status status="PASS" start="2024-07-23T22:31:59.124408" elapsed="6.161430"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-07-23T17:42:04.080917" elapsed="2.451777"/>
+<status status="PASS" start="2024-07-23T22:32:05.285838" elapsed="2.199232"/>
 </kw>
-<status status="PASS" start="2024-07-23T17:41:45.154271" elapsed="21.378423"/>
+<status status="PASS" start="2024-07-23T22:31:46.977541" elapsed="20.507529"/>
 </test>
-<status status="PASS" start="2024-07-23T17:41:44.541995" elapsed="21.993004"/>
+<test id="s1-t2" name="Invalid Email and Correct Password" line="11">
+<kw name="Open Google" owner="resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-23T22:32:07.487487" level="INFO">Opening browser 'Chrome' to base url 'https://demo.thingsboard.io/login'.</msg>
+<msg time="2024-07-23T22:32:07.877649" level="WARN">The chromedriver version (125.0.6422.78) detected in PATH at C:\Chromedriver\chromedriver.exe might not be compatible with the detected chrome version (126.0.6478.184); currently, chromedriver 126.0.6478.182 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${Web Thingsboard}</arg>
+<arg>${Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-23T22:32:07.487487" elapsed="8.949736"/>
+</kw>
+<status status="PASS" start="2024-07-23T22:32:07.487487" elapsed="8.949736"/>
+</kw>
+<kw name="Login with Email and Password invalid credentials" owner="resource">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-23T22:32:16.438336" elapsed="0.033754"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//img[@aria-label='logo']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-23T22:32:16.473098" elapsed="0.668355"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='username-input']</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-07-23T22:32:17.141453" elapsed="0.027011"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-23T22:32:17.168464" level="INFO">Typing text 'Noname@hotmail.com' into text field 'xpath=//input[@id='username-input']'.</msg>
+<arg>xpath=//input[@id='username-input']</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T22:32:17.168464" elapsed="0.181422"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='password-input']</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-07-23T22:32:17.349886" elapsed="0.023324"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-23T22:32:17.375561" level="INFO">Typing text 'AdminAdmin' into text field 'xpath=//input[@id='password-input']'.</msg>
+<arg>xpath=//input[@id='password-input']</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T22:32:17.375561" elapsed="0.119766"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-23T22:32:17.495327" level="INFO">Clicking element 'xpath=//span[normalize-space()='Login']'.</msg>
+<arg>xpath=//span[normalize-space()='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T22:32:17.495327" elapsed="0.061311"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-23T22:32:22.568758" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-23T22:32:17.556638" elapsed="5.012120"/>
+</kw>
+<arg>Noname@hotmail.com</arg>
+<arg>AdminAdmin</arg>
+<status status="PASS" start="2024-07-23T22:32:16.438336" elapsed="6.130422"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-23T22:32:22.569792" elapsed="2.202084"/>
+</kw>
+<status status="PASS" start="2024-07-23T22:32:07.487487" elapsed="17.284389"/>
+</test>
+<test id="s1-t3" name="Invalid Email and Invalid Password" line="12">
+<kw name="Open Google" owner="resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-23T22:32:24.774403" level="INFO">Opening browser 'Chrome' to base url 'https://demo.thingsboard.io/login'.</msg>
+<msg time="2024-07-23T22:32:25.168448" level="WARN">The chromedriver version (125.0.6422.78) detected in PATH at C:\Chromedriver\chromedriver.exe might not be compatible with the detected chrome version (126.0.6478.184); currently, chromedriver 126.0.6478.182 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${Web Thingsboard}</arg>
+<arg>${Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-23T22:32:24.774403" elapsed="4.473059"/>
+</kw>
+<status status="PASS" start="2024-07-23T22:32:24.774403" elapsed="4.473059"/>
+</kw>
+<kw name="Login with Email and Password invalid credentials" owner="resource">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-23T22:32:29.248471" elapsed="0.034491"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//img[@aria-label='logo']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-23T22:32:29.284378" elapsed="0.661103"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='username-input']</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-07-23T22:32:29.945481" elapsed="0.031243"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-23T22:32:29.978002" level="INFO">Typing text 'Noname@hotmail.com' into text field 'xpath=//input[@id='username-input']'.</msg>
+<arg>xpath=//input[@id='username-input']</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T22:32:29.976724" elapsed="0.175109"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>xpath=//input[@id='password-input']</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-07-23T22:32:30.151833" elapsed="0.020823"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-23T22:32:30.178416" level="INFO">Typing text 'AdminAdmin0001' into text field 'xpath=//input[@id='password-input']'.</msg>
+<arg>xpath=//input[@id='password-input']</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T22:32:30.178416" elapsed="0.133440"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-23T22:32:30.311856" level="INFO">Clicking element 'xpath=//span[normalize-space()='Login']'.</msg>
+<arg>xpath=//span[normalize-space()='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T22:32:30.311856" elapsed="0.062980"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-23T22:32:35.374840" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-23T22:32:30.374836" elapsed="5.000004"/>
+</kw>
+<arg>Noname@hotmail.com</arg>
+<arg>AdminAdmin0001</arg>
+<status status="PASS" start="2024-07-23T22:32:29.248471" elapsed="6.126369"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-23T22:32:35.375647" elapsed="2.189773"/>
+</kw>
+<status status="PASS" start="2024-07-23T22:32:24.774403" elapsed="12.791017"/>
+</test>
+<status status="PASS" start="2024-07-23T22:31:46.773025" elapsed="50.792395"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Testbykeyword">Testbykeyword</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="TestDataDriven">TestDataDriven</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-07-23T17:41:44.596835" level="WARN">Error in file 'C:\Users\user\Documents\GitHub\Demo-Thingsboard--Test-web-\Resources\resource.robot' on line 1: Singular section headers like '*** Setting ***' are deprecated. Use plural format like '*** Settings ***' instead.</msg>
-<msg time="2024-07-23T17:41:45.936946" level="WARN">The chromedriver version (125.0.6422.78) detected in PATH at C:\Chromedriver\chromedriver.exe might not be compatible with the detected chrome version (126.0.6478.184); currently, chromedriver 126.0.6478.182 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-07-23T22:31:46.960227" level="WARN">Error in file 'C:\Users\user\Documents\GitHub\Demo-Thingsboard--Test-web-\Resources\resource.robot' on line 1: Singular section headers like '*** Setting ***' are deprecated. Use plural format like '*** Settings ***' instead.</msg>
+<msg time="2024-07-23T22:31:47.388943" level="WARN">The chromedriver version (125.0.6422.78) detected in PATH at C:\Chromedriver\chromedriver.exe might not be compatible with the detected chrome version (126.0.6478.184); currently, chromedriver 126.0.6478.182 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-07-23T22:32:07.877649" level="WARN">The chromedriver version (125.0.6422.78) detected in PATH at C:\Chromedriver\chromedriver.exe might not be compatible with the detected chrome version (126.0.6478.184); currently, chromedriver 126.0.6478.182 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-07-23T22:32:25.168448" level="WARN">The chromedriver version (125.0.6422.78) detected in PATH at C:\Chromedriver\chromedriver.exe might not be compatible with the detected chrome version (126.0.6478.184); currently, chromedriver 126.0.6478.182 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
